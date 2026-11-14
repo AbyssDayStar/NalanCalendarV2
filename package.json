@@ -1,5 +1,18 @@
 {
+  "name": "botsever",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "dependencies": {
     "@netlify/functions": "^6.1.1"
+  },
+  "scripts": {
+    "invoke": "netlify functions:invoke"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6"
+  },
+  "compilerOptions": {
+    "types": ["node"]
   }
 }
