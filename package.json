@@ -4,15 +4,13 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@netlify/functions": "^6.1.1"
+    "@netlify/functions": "^6.1.1",
+    "@netlify/blobs": "^11.1.9"
   },
   "scripts": {
     "invoke": "netlify functions:invoke"
   },
   "devDependencies": {
-    "@types/node": "^26.6.6"
-  },
-  "compilerOptions": {
-    "types": ["node"]
+    "@types/node": "^26.0.0"
   }
 }
