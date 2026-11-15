@@ -15,6 +15,8 @@ export async function syncMatrix(since?: string): Promise<SyncResponse> {
 
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`sync failed: ${res.status}`);
+  console.error("Fetch failed. Underlying cause:", res.status);
+
   const data = await res.json();
   return data as SyncResponse;
 }
