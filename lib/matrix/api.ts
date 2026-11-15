@@ -15,7 +15,8 @@ export async function syncMatrix(since?: string): Promise<SyncResponse> {
 
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`sync failed: ${res.status}`);
-  return res.json();
+  const data = await res.json();
+  return data as SyncResponse;
 }
 
 /** 向指定 room 发送纯文本消息 */
@@ -31,5 +32,6 @@ export async function sendMessage(
     body: JSON.stringify({ msgtype: "m.text", body }),
   });
   if (!res.ok) throw new Error(`send failed: ${res.status}`);
-  return res.json();
+  const data = await res.json();
+  return data as { event_id: string };
 }

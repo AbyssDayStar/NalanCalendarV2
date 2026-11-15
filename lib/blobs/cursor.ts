@@ -6,6 +6,7 @@ const store = getStore(config.blobsStoreName);
 
 export async function readCursor(): Promise<string | undefined> {
   const raw = await store.get(config.cursorKey);
+  console.log(raw);
   return raw ?? undefined;
 }
 

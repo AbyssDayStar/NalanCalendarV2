@@ -4,13 +4,14 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@netlify/functions": "^6.1.1",
-    "@netlify/blobs": "^11.1.9"
+    "@netlify/blobs": "^11.1.9",
+    "@netlify/functions": "^6.1.1"
   },
   "scripts": {
     "invoke": "netlify functions:invoke"
   },
   "devDependencies": {
-    "@types/node": "^26.0.0"
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
   }
 }

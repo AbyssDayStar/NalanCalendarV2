@@ -28,7 +28,7 @@ async function respondNewUser(
 }
 
 async function respondMentions(
-  action: Extract<FilteredAction, { kind: "mention" }>,,
+  action: Extract<FilteredAction, { kind: "mention" }>,
   roomId: string,
 ): Promise<SendResult> {
   try {
